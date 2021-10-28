@@ -10,8 +10,11 @@ namespace ActorSystem.LifeCycle
         private readonly SerialDisposable _serial = new SerialDisposable();
         private IDisposer _parent;
 
-        private List<Action> _onStartActions;
-        private List<Action> _onResetActions;
+        private CompositeDisposable Composite
+        {
+            get => _serial.Disposable as CompositeDisposable;
+            set => _serial.Disposable = value;
+        }
 
         public static IActorLifeCycle Create()
         {
@@ -29,12 +32,6 @@ namespace ActorSystem.LifeCycle
             _parent.Add(_serial);
         }
 
-        private CompositeDisposable Composite
-        {
-            get => _serial.Disposable as CompositeDisposable;
-            set => _serial.Disposable = value;
-        }
-
         public void Add(IDisposable disposable)
         {
             if (_serial.IsDisposed)
@@ -47,27 +44,6 @@ namespace ActorSystem.LifeCycle
                     Composite = new CompositeDisposable();
                 Composite.Add(disposable);
             }
-        }
-
-        public void OnStart(Action onStart)
-        {
-            if (!_onStartActions.Contains(onStart))
-            {
-                _onStartActions.Add(onStart);
-            }
-        }
-
-        public void OnReset(Action onReset)
-        {
-            if (!_onResetActions.Contains(onReset))
-            {
-                _onResetActions.Add(onReset);
-            }
-        }
-
-        public void Start()
-        {
-            _onStartActions.ForEach(e => e?.Invoke());
         }
 
         public void Reset()
