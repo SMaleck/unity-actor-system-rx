@@ -1,5 +1,5 @@
-# Unity Actor System
-Provides an ECS-like Actor System for Unity.
+# Unity Actor System Rx
+Provides an ECS-like Actor System for Unity. Based around Reactive Programming using UniRx
 
 ## Quick Start
 > This package uses the [OpenUPM](https://openupm.com/) scoped registry.
@@ -15,7 +15,7 @@ To use this package in your Unity project, you have to manually add it to you `m
 ```json
 {
   "dependencies": {
-    "com.smaleck.savegame-system": "git://github.com/SMaleck/unity-actor-system.git#v1.0.0"
+    "com.smaleck.actor-system-rx": "git://github.com/SMaleck/unity-actor-system-rx.git#v0.3.0"
   }
 }
 ```
@@ -24,7 +24,7 @@ To use this package in your Unity project, you have to manually add it to you `m
 ```json
 {
   "dependencies": {
-    "com.smaleck.savegame-system": "git://github.com/SMaleck/unity-actor-system.git#v1.0.0"
+    "com.smaleck.actor-system-rx": "git://github.com/SMaleck/unity-actor-system.git#v1.0.0"
   },
   "scopedRegistries": [
       {

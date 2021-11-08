@@ -1,7 +1,7 @@
 {
-    "name": "com.smaleck.actor-system",
-    "version": "0.2.0",
-    "displayName": "Actor System",
+    "name": "com.smaleck.actor-system-rx",
+    "version": "0.3.0",
+    "displayName": "Actor System Rx",
     "description": "Provides an ECS-like Actor System for Unity",
     "unity": "2019.1",
     "unityRelease": "0b5",
@@ -18,6 +18,6 @@
     "author": {
         "name": "SMaleck",
         "email": "s.maleck@live.de",
-        "url": "https://github.com/SMaleck/unity-actor-system"
+        "url": "https://github.com/SMaleck/unity-actor-system-rx"
     }
 }
