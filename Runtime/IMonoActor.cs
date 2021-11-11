@@ -1,7 +1,7 @@
-﻿using ActorSystem.Components;
-using ActorSystem.LifeCycle;
+﻿using ActorSystemRx.Components;
+using ActorSystemRx.LifeCycle;
 
-namespace ActorSystem
+namespace ActorSystemRx
 {
     public interface IMonoActor : IActor, IActorLifeCycleOwner
     {

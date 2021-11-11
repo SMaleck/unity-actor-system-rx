@@ -1,10 +1,10 @@
-﻿using ActorSystem.Creation;
-using ActorSystem.LifeCycle;
-using ActorSystem.Registration;
-using ActorSystem.Utility;
+﻿using ActorSystemRx.Utility;
+using ActorSystemRx.Creation;
+using ActorSystemRx.LifeCycle;
+using ActorSystemRx.Registration;
 using UtilitiesGeneral.Extensions;
 
-namespace ActorSystem.Views
+namespace ActorSystemRx.Views
 {
     public class StandaloneActorController : DisposableActorSystemElement
     {

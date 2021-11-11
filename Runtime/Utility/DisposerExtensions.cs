@@ -2,7 +2,7 @@
 using UniRx;
 using UtilitiesUniRx.Utility;
 
-namespace ActorSystem.Utility
+namespace ActorSystemRx.Utility
 {
     public static class DisposerExtensions
     {

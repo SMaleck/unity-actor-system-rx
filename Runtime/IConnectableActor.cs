@@ -1,6 +1,6 @@
-﻿using ActorSystem.LifeCycle;
+﻿using ActorSystemRx.LifeCycle;
 
-namespace ActorSystem
+namespace ActorSystemRx
 {
     public interface IConnectableActor : IActor, IComponentOwner, IActorLifeCycleOwner
     {

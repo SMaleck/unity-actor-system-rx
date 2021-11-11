@@ -1,6 +1,6 @@
-﻿using ActorSystem.LifeCycle;
+﻿using ActorSystemRx.LifeCycle;
 
-namespace ActorSystem.Components.DataComponents
+namespace ActorSystemRx.Components.DataComponents
 {
     public class AbstractDataComponent : DisposableActorSystemElement, IActorComponent, IStartableComponent
     {

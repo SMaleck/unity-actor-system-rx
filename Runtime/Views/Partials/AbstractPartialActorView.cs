@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ActorSystem.Views.Partials
+namespace ActorSystemRx.Views.Partials
 {
     public abstract class AbstractPartialActorView : MonoBehaviour, IPartialActorView
     {

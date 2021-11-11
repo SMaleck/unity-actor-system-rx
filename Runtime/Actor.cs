@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ActorSystem.Components;
-using ActorSystem.LifeCycle;
-using ActorSystem.Utility;
+using ActorSystemRx.Utility;
+using ActorSystemRx.Components;
+using ActorSystemRx.LifeCycle;
 using UtilitiesGeneral.Extensions;
 using UtilitiesGeneral.Logging;
 using Zenject;
 
-namespace ActorSystem
+namespace ActorSystemRx
 {
     public class Actor : DisposableActorSystemElement, IConnectableActor
     {

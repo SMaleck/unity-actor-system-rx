@@ -1,10 +1,10 @@
 ﻿using System;
-using ActorSystem.Components;
-using ActorSystem.LifeCycle;
+using ActorSystemRx.Components;
+using ActorSystemRx.LifeCycle;
 using UnityEngine;
 using UtilitiesGeneral.Extensions;
 
-namespace ActorSystem
+namespace ActorSystemRx
 {
     public class MonoActor : MonoBehaviour, IMonoActor
     {

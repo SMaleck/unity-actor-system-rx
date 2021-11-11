@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using UniRx;
 using UtilitiesUniRx.Utility;
 
-namespace ActorSystem.LifeCycle
+namespace ActorSystemRx.LifeCycle
 {
     public class ActorLifeCycle : IActorLifeCycle
     {

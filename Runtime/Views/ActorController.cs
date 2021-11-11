@@ -1,10 +1,10 @@
-﻿using ActorSystem.Creation;
-using ActorSystem.LifeCycle;
-using ActorSystem.Utility;
+﻿using ActorSystemRx.Utility;
+using ActorSystemRx.Creation;
+using ActorSystemRx.LifeCycle;
 using UtilitiesGeneral.Extensions;
 using Zenject;
 
-namespace ActorSystem.Views
+namespace ActorSystemRx.Views
 {
     public class ActorController : DisposableActorSystemElement
     {

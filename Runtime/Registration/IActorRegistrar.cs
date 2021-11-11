@@ -1,6 +1,6 @@
-﻿using ActorSystem.Views;
+﻿using ActorSystemRx.Views;
 
-namespace ActorSystem.Registration
+namespace ActorSystemRx.Registration
 {
     public interface IActorRegistrar
     {

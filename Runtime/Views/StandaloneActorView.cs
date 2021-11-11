@@ -1,7 +1,7 @@
-﻿using ActorSystem.Registration;
+﻿using ActorSystemRx.Registration;
 using Zenject;
 
-namespace ActorSystem.Views
+namespace ActorSystemRx.Views
 {
     public class StandaloneActorView : ActorView
     {

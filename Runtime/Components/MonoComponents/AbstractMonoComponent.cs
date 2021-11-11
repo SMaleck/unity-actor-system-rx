@@ -1,9 +1,9 @@
-﻿using ActorSystem.LifeCycle;
+﻿using ActorSystemRx.LifeCycle;
 using UnityEngine;
 using UtilitiesUniRx.Utility;
 using Zenject;
 
-namespace ActorSystem.Components.MonoComponents
+namespace ActorSystemRx.Components.MonoComponents
 {
     public class AbstractMonoComponent : MonoBehaviour, IActorComponent, IStartableComponent
     {

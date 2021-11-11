@@ -1,6 +1,6 @@
-﻿using ActorSystem.LifeCycle;
+﻿using ActorSystemRx.LifeCycle;
 
-namespace ActorSystem.Systems
+namespace ActorSystemRx.Systems
 {
     public abstract class AbstractActorSystem : DisposableActorSystemElement, IActorSystem, IStartableSystem
     {

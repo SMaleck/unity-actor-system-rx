@@ -1,6 +1,6 @@
-﻿using ActorSystem.Components;
+﻿using ActorSystemRx.Components;
 
-namespace ActorSystem
+namespace ActorSystemRx
 {
     public interface IActor
     {

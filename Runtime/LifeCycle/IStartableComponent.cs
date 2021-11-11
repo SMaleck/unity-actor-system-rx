@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ActorSystem.LifeCycle
+namespace ActorSystemRx.LifeCycle
 {
     public interface IStartableComponent : IDisposable
     {

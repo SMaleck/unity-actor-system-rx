@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace ActorSystem.Views
+namespace ActorSystemRx.Views
 {
     public class ActorView : MonoBehaviour, IActorView
     {

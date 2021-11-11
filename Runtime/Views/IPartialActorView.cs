@@ -1,4 +1,4 @@
-﻿namespace ActorSystem.Views
+﻿namespace ActorSystemRx.Views
 {
     public interface IPartialActorView
     {

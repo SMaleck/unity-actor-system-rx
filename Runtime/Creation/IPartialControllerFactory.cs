@@ -1,6 +1,6 @@
-﻿using ActorSystem.Views;
+﻿using ActorSystemRx.Views;
 
-namespace ActorSystem.Creation
+namespace ActorSystemRx.Creation
 {
     public interface IPartialControllerFactory
     {

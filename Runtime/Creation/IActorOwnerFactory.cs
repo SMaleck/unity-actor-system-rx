@@ -1,4 +1,4 @@
-﻿namespace ActorSystem.Creation
+﻿namespace ActorSystemRx.Creation
 {
     public interface IActorOwnerFactory
     {

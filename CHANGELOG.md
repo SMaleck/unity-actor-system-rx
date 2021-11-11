@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.0] 2021-11-11
+[Changed]
+- Renames assembly from `Smaleck.ActorSystem` to `Smaleck.ActorSystemRx`
+- Renames root namespace from `ActorSystem` to `ActorSystemRx`
+
 ## [0.3.0] 2021-11-08
 [Changed]
 - Renames repo and package to `actor-system-rx`

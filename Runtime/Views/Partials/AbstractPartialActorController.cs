@@ -1,7 +1,7 @@
-﻿using ActorSystem.LifeCycle;
-using ActorSystem.Utility;
+﻿using ActorSystemRx.Utility;
+using ActorSystemRx.LifeCycle;
 
-namespace ActorSystem.Views.Partials
+namespace ActorSystemRx.Views.Partials
 {
     public class AbstractPartialActorController : DisposableActorSystemElement
     {

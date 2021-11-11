@@ -1,7 +1,7 @@
-﻿using ActorSystem.Views;
+﻿using ActorSystemRx.Views;
 using Zenject;
 
-namespace ActorSystem.Installation
+namespace ActorSystemRx.Installation
 {
     public class ActorSystemLevelInstaller : Installer<ActorSystemLevelInstaller>
     {

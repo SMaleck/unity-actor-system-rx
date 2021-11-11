@@ -1,6 +1,6 @@
 ﻿using UtilitiesUniRx.Utility;
 
-namespace ActorSystem.LifeCycle
+namespace ActorSystemRx.LifeCycle
 {
     public interface IActorLifeCycle : IDisposer
     {

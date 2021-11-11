@@ -2,7 +2,7 @@
 using UtilitiesUniRx.Utility;
 using Zenject;
 
-namespace ActorSystem.LifeCycle
+namespace ActorSystemRx.LifeCycle
 {
     public class DisposableActorSystemElement : IDisposable
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ActorSystem.Systems
+namespace ActorSystemRx.Systems
 {
     public interface IActorSystem : IDisposable
     {
