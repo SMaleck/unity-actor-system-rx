@@ -1,21 +1,24 @@
-﻿using System;
-using ActorSystemRx.Components;
+﻿using ActorSystemRx.Components;
 using ActorSystemRx.LifeCycle;
+using System;
 using UnityEngine;
 using UtilitiesGeneral.Extensions;
+using Zenject;
 
 namespace ActorSystemRx
 {
     public class MonoActor : MonoBehaviour, IMonoActor
     {
-        private IConnectableActor _actor;
-        private IActorComponent[] _monoComponents;
+        public class Factory : PlaceholderFactory<UnityEngine.Object, MonoActor> { }
 
-        public IActorLifeCycle LifeCycle => _actor.LifeCycle;
+        protected IConnectableActor _owningActor;
+        protected IActorComponent[] _monoComponents;
+
+        public IActorLifeCycle LifeCycle => _owningActor.LifeCycle;
 
         public void SetOwner(IConnectableActor actor)
         {
-            if (_actor != null)
+            if (_owningActor != null)
             {
                 return;
             }
@@ -23,7 +26,7 @@ namespace ActorSystemRx
             GetComponentsInChildren<IActorComponent>()
                 .ForEach(e => actor.Attach(e));
 
-            _actor = actor;
+            _owningActor = actor;
         }
 
         IActorComponent[] IMonoActor.GetMonoComponents()
@@ -33,37 +36,42 @@ namespace ActorSystemRx
 
         public T Get<T>() where T : class, IActorComponent
         {
-            return _actor.Get<T>();
+            return _owningActor.Get<T>();
         }
 
         public bool TryGet<T>(out T component) where T : class, IActorComponent
         {
-            return _actor.TryGet<T>(out component);
+            return _owningActor.TryGet<T>(out component);
         }
 
         public bool Has<T>() where T : class, IActorComponent
         {
-            return _actor.Has<T>();
+            return _owningActor.Has<T>();
+        }
+
+        public bool Has(Type type)
+        {
+            return _owningActor.Has(type);
         }
 
         public void StartActor()
         {
-            _actor.StartActor();
+            _owningActor.StartActor();
         }
 
         public void AttachSystem(IStartableSystem startableSystem)
         {
-            _actor.AttachSystem(startableSystem);
+            _owningActor.AttachSystem(startableSystem);
         }
 
         public void OnStart(Action onStartAction)
         {
-            _actor.OnStart(onStartAction);
+            _owningActor.OnStart(onStartAction);
         }
 
         public void ResetActor()
         {
-            _actor.ResetActor();
+            _owningActor.ResetActor();
         }
     }
 }

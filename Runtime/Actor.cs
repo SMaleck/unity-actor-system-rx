@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ActorSystemRx.Components;
+using ActorSystemRx.LifeCycle;
+using ActorSystemRx.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using ActorSystemRx.Utility;
-using ActorSystemRx.Components;
-using ActorSystemRx.LifeCycle;
 using UtilitiesGeneral.Extensions;
 using UtilitiesGeneral.Logging;
 using Zenject;
@@ -50,6 +50,19 @@ namespace ActorSystemRx
         public bool Has<T>() where T : class, IActorComponent
         {
             return TryGet<T>(out _);
+        }
+
+        public bool Has(Type type)
+        {
+            foreach (var component in _actorComponents.Values)
+            {
+                if (component.GetType().GetInterfaces().Contains(type))
+                {
+                    return true;
+                }
+            }
+            
+            return false;
         }
 
         void IActorLifeCycleOwner.StartActor()

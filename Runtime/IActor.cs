@@ -1,4 +1,5 @@
-﻿using ActorSystemRx.Components;
+﻿using System;
+using ActorSystemRx.Components;
 
 namespace ActorSystemRx
 {
@@ -7,5 +8,6 @@ namespace ActorSystemRx
         T Get<T>() where T : class, IActorComponent;
         bool TryGet<T>(out T component) where T : class, IActorComponent;
         bool Has<T>() where T : class, IActorComponent;
+        bool Has(Type type);
     }
 }

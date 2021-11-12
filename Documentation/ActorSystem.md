@@ -15,20 +15,10 @@ using a monolithic `ActorModel` quickly becomes unwieldy.
 Using a component based approach enables us to have a clear separation and encapsulation of state per concern, 
 while keeping that state neatly organized within a single `Actor`.
 
-Ideally components do not do any significant work and are rather updated by **Systems** or **Controllers** (see below).
+Ideally components do not do any significant work and are rather updated by **Systems** (see below).
 
 ## Systems
 `Systems` can be attached to an `Actor` and operate on its `ActorComponents`. 
 Basically they are updating component state from the outside or tying it up across components. 
 
 For example a `MovementSystem` could take locomotion intentions from a `MovementComponent` and update the `TransformComponent`'s position with it.
-
-## Views & Controllers
-Similar to small components on the `Actor` side, we use a small `PartialActorView` and controller to handle focused concerns. 
-
-For Example you could have a `HealthComponent` and then a `HealthBarPartialView`, 
-which is displaying the a healthbar above the actors head in-game. 
-The main ``ActorView``'s role is to find and collect all the partial views on the prefab, so it is similar to the `Actor` class.
-
-You have to create a `PartialControllerFactory`, which will create your concrete controllers for your partial views. 
-This could be a simple switch based on type or you could do some naming convention rules based on the view name.

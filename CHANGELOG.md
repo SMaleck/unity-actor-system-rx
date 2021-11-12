@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.5.0] 2021-11-12
+[Removed]
+- Removes partial views and controllers. MonoComponents naturally take the role of PartialViews and Systems the role of controllers. The partial VC stack was an unnecessary baggage.
+- Removes actor registration. The registrar was needed to finish setup of a standalone actor by creating the controllers and tying things together. With the With the partial VC stack gone, this can now be done simply in `StandaloneMonoActor`
+
+[Added]
+- `StandaloneMonoActor` to replace `StandaloneActorView` and related classes.
+
+[Changed]
+- Above changes simplify standalone creation significantly
+
 ## [0.4.0] 2021-11-11
 [Changed]
 - Renames assembly from `Smaleck.ActorSystem` to `Smaleck.ActorSystemRx`
