@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.1] 2021-11-15
+[Fixed]
+- Adds missing binding for `MonoActor` prefab factory
+
 ## [0.5.0] 2021-11-12
 [Removed]
 - Removes partial views and controllers. MonoComponents naturally take the role of PartialViews and Systems the role of controllers. The partial VC stack was an unnecessary baggage.

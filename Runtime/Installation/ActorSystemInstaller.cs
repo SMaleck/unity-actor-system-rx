@@ -10,6 +10,12 @@ namespace ActorSystemRx.Installation
                     Actor,
                     Actor.Factory>()
                 .AsSingle();
+
+            Container.BindFactory<
+                    UnityEngine.Object, 
+                    MonoActor, 
+                    MonoActor.Factory>()
+                .FromFactory<PrefabFactory<MonoActor>>();
         }
     }
 }
