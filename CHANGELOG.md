@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.2] - 2021-11-25
+[Fixed]
+- Components and Systems are now correctly being re-added to the Actors LifeCycle after reset
+
 ## [0.5.1] 2021-11-15
 [Fixed]
 - Adds missing binding for `MonoActor` prefab factory

@@ -61,15 +61,28 @@ namespace ActorSystemRx
                     return true;
                 }
             }
-            
+
             return false;
         }
 
         void IActorLifeCycleOwner.StartActor()
         {
-            _startableComponents.ForEach(e => e.StartLifeCycle());
-            _startableSystems.ForEach(e => e.StartLifeCycle());
-            _additionalStartActions.ForEach(e => e.Invoke());
+            foreach (var component in _startableComponents)
+            {
+                component.StartLifeCycle();
+                component.AddTo(LifeCycle);
+            }
+
+            foreach (var system in _startableSystems)
+            {
+                system.StartLifeCycle();
+                system.AddTo(LifeCycle);
+            }
+
+            foreach (var action in _additionalStartActions)
+            {
+                action.Invoke();
+            }
         }
 
         void IActorLifeCycleOwner.ResetActor()
@@ -83,7 +96,6 @@ namespace ActorSystemRx
                 startableSystem != null)
             {
                 _startableSystems.Add(startableSystem);
-                startableSystem.AddTo(LifeCycle);
             }
         }
 
@@ -102,7 +114,6 @@ namespace ActorSystemRx
                 .ForEach(type => _actorComponents.Add(type, component));
 
             _startableComponents.Add((IStartableComponent)component);
-            component.AddTo(LifeCycle);
 
             return this;
         }

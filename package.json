@@ -1,6 +1,6 @@
 {
     "name": "com.smaleck.actor-system-rx",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "displayName": "Actor System Rx",
     "description": "Provides an ECS-like Actor System for Unity",
     "unity": "2019.1",
